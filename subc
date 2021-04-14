@@ -1,0 +1,52 @@
+[custom]
+;不要随意改变关键字，否则会导致出错
+;acl4SSR规则-在线版
+;从 lance微型自用 修改
+
+;去广告：支持
+;自动测速：支持
+;微软分流：支持
+;苹果分流：不支持
+;增强中国IP段：不支持
+;增强国外GFW：不支持
+;网易云音乐：支持
+;学术网站：支持
+
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+surge_ruleset=🛑 全球拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+surge_ruleset=🛑 全球拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+surge_ruleset=🛑 全球拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
+surge_ruleset=🛑 全球拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+surge_ruleset=🛑 全球拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+surge_ruleset=☁ 网易音乐,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list
+surge_ruleset=📰 学术网站,https://raw.githubusercontent.com/ChuGary/clash-rule-generator/master/academic.list
+surge_ruleset=Ⓜ️ 微软服务,https://raw.githubusercontent.com/ChuGary/clash-rule-generator/master/microsoft.list
+surge_ruleset=Ⓜ️ 微软服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
+surge_ruleset=🎥 奈飞视频,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
+surge_ruleset=🎥 奈飞视频,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AmazonIp.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+surge_ruleset=🎯 全球直连,[]GEOIP,CN
+surge_ruleset=🐟 漏网之鱼,[]FINAL
+
+custom_proxy_group=🚀 节点选择`select`[]♻️ 自动选择`[]🔮 负载均衡`[]DIRECT`.*
+custom_proxy_group=♻️ 自动选择`url-test`.*`http://www.gstatic.com/generate_204`300
+custom_proxy_group=🔮 负载均衡`load-balance`.*`http://www.gstatic.com/generate_204`180
+custom_proxy_group=☁ 网易音乐`select`(?i:MUSIC|NETEASE.*?MUSIC|网易云|[^-]音乐|回国|BACK)`[]🎯 全球直连`[]🚀 节点选择
+custom_proxy_group=📰 学术网站`select`[]🚀 节点选择`[]🎯 全球直连`[]♻️ 自动选择`.*
+custom_proxy_group=Ⓜ️ 微软服务`select`[]🎯 全球直连`[]🚀 节点选择
+custom_proxy_group=🎥 奈飞视频`select`^(?!.*?(港|HK|Hong Kong)).*(NF|奈飞|网飞|解锁|Netflix|NETFLIX|Media|流媒体)`[]🚀 节点选择`[]♻️ 自动选择
+custom_proxy_group=🐟 漏网之鱼`select`[]🚀 节点选择`[]🎯 全球直连`[]♻️ 自动选择
+custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 节点选择`[]♻️ 自动选择
+custom_proxy_group=🛑 全球拦截`select`[]REJECT`[]DIRECT
+
+enable_rule_generator=true
+overwrite_original_rules=true
+exclude_remarks = (流量|时间|官网|产品|过期|回国|无效|等级[12])
+
+clash_rule_base = https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GeneralClashConfig.yml
