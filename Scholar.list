@@ -78,6 +78,7 @@ DOMAIN-SUFFIX,westlawchina.com
 DOMAIN-SUFFIX,wiley.com
 DOMAIN-SUFFIX,worldbank.org
 DOMAIN-SUFFIX,worldscientific.com
+DOMAIN-KEYWORD,ieee.org
 
 #学校内网
 DOMAIN-SUFFIX,nwpu.edu.cn
